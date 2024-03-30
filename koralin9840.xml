@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cultivator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    <storeData>
+        <name>
+            <en>Koralin 9-840</en></name>
+        <specs>
+            <neededPower>320</neededPower>
+            <workingWidth>8.4</workingWidth>
+            <combination filterCategory="weights" filterSpec="weight" filterSpecMin="600" filterSpecMax="700"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_shallowCultivator</function>
+        </functions>
+        <image>store_koralin9840.dds</image>
+        <price>87500</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>LEMKEN</brand>
+        <category>cultivators</category>
+        <shopTranslationOffset>0 -0.094 0</shopTranslationOffset>
+        <shopRotationOffset>5.741 0 0.088</shopRotationOffset>
+        <vertexBufferMemoryUsage>7053568</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>1773824</indexBufferMemoryUsage>
+        <textureMemoryUsage>4653056</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+    <base>
+        <typeDesc>$l10n_typeDesc_cultivator</typeDesc>
+        <filename>koralin9840.i3d</filename>
+        <size width="4.2" length="11" height="4.5" lengthOffset="1.1"/>
+        <speedLimit value="15"/>
+        <components>
+            <component centerOfMass="0 0.6 0.5" solverIterationCount="20" mass="5860"/>
+            <component centerOfMass="1 0 0" solverIterationCount="10" mass="250"/>
+            <component centerOfMass="-1 0 0" solverIterationCount="10" mass="250"/>
+            <component centerOfMass="0 0 0" solverIterationCount="20" mass="700"/>
+            <component centerOfMass="0 0 0" solverIterationCount="20" mass="700"/>
+            <joint component1="1" component2="2" node="componentJointLeftArm" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="1" component2="3" node="componentJointRightArm" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="1" component2="4" node="componentJointDrawbar" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="4" component2="5" node="componentJointAttacher" rotLimit="0 0 0" transLimit="0 0 0"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="TOOL_TRAILED"/>
+    </base>
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T404/400_55R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="2.9" repr="wheelLeft" forcePointRatio="0.35" initialCompression="40" suspTravel="0.15" spring="44" damper="20" supportsWheelSink="false"/>
+                        <wheelChock/>
+                        <wheelChock isInverted="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T404/400_55R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="2.9" repr="wheelRight" forcePointRatio="0.35" initialCompression="40" suspTravel="0.15" spring="44" damper="20" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/340_55R16.xml" isLeft="true">
+                        <physics restLoad="0.2" repr="supportWheelFrontLeft" forcePointRatio="0.25" mass="0.05" initialCompression="25" suspTravel="0.1" spring="5" damper="10" yOffset="0" brakeFactor="0" rotationDamping="0.005" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/340_55R16.xml" isLeft="false">
+                        <physics restLoad="1.6" repr="supportWheelFrontCenter" forcePointRatio="0.25" mass="0.05" initialCompression="25" suspTravel="0.1" spring="42" damper="30" yOffset="0.04" brakeFactor="0" rotationDamping="0.005" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/340_55R16.xml" isLeft="false">
+                        <physics restLoad="0.2" repr="supportWheelFrontRight" forcePointRatio="0.25" mass="0.05" initialCompression="25" suspTravel="0.1" spring="5" damper="10" yOffset="0" brakeFactor="0" rotationDamping="0.005" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/260_70R15_3.xml" isLeft="true">
+                        <physics restLoad="0.2" repr="supportWheelBackLeft" forcePointRatio="0.25" mass="0.05" initialCompression="25" suspTravel="0.1" spring="5" damper="10" yOffset="0" brakeFactor="0" rotationDamping="0.005" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/260_70R15_3.xml" isLeft="false">
+                        <physics restLoad="0.2" repr="supportWheelBackRight" forcePointRatio="0.25" mass="0.05" initialCompression="25" suspTravel="0.1" spring="5" damper="10" yOffset="0" brakeFactor="0" rotationDamping="0.005" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="0.2" repr="supportWheelRollerLeft" forcePointRatio="0.25" radius="0.16" width="0.3" mass="0.05" initialCompression="25" suspTravel="0.1" spring="15" damper="10" yOffset="0.02" brakeFactor="0" rotationDamping="0.008" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="0.2" repr="supportWheelRollerCenter" forcePointRatio="0.25" radius="0.16" width="0.3" mass="0.05" initialCompression="25" suspTravel="0.1" spring="25" damper="10" yOffset="0.02" brakeFactor="0" rotationDamping="0.008" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="0.2" repr="supportWheelRollerRight" forcePointRatio="0.25" radius="0.16" width="0.3" mass="0.05" initialCompression="25" suspTravel="0.1" spring="15" damper="10" yOffset="0.02" brakeFactor="0" rotationDamping="0.008" supportsWheelSink="false"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+        <rimColor>LEMKEN_RED1</rimColor>
+        <hubs>
+            <color0>LEMKEN_BLUE1</color0>
+            <color1>SHARED_GREY3</color1>
+            <hub linkNode="wheelLeft" filename="$data/shared/wheels/hubs/hub_n10_18.xml" isLeft="true" scale="0.285 0.285 0.285" offset="0.012"/>
+            <hub linkNode="wheelRight" filename="$data/shared/wheels/hubs/hub_n10_18.xml" isLeft="false" scale="0.285 0.285 0.285" offset="0.012"/>
+            <hub linkNode="supportWheelFrontLeft" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="true" scale="0.203 0.203 0.203"/>
+            <hub linkNode="supportWheelFrontCenter" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="false" scale="0.203 0.203 0.203"/>
+            <hub linkNode="supportWheelFrontRight" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="false" scale="0.203 0.203 0.203"/>
+            <hub linkNode="supportWheelBackLeft" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="true" scale="0.203 0.203 0.203"/>
+            <hub linkNode="supportWheelBackRight" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="false" scale="0.203 0.203 0.203"/>
+        </hubs>
+    </wheels>
+    <speedRotatingParts>
+        <speedRotatingPart node="leftArmRoller01" radius="0.2" groundReferenceNodeIndex="1" wheelIndex="8"/>
+        <speedRotatingPart node="leftArmRoller02" radius="0.2" groundReferenceNodeIndex="1" wheelIndex="8"/>
+        <speedRotatingPart node="centerRoller01" radius="0.2" groundReferenceNodeIndex="1" wheelIndex="9"/>
+        <speedRotatingPart node="centerRoller02" radius="0.2" groundReferenceNodeIndex="1" wheelIndex="9"/>
+        <speedRotatingPart node="rightArmRoller01" radius="0.2" groundReferenceNodeIndex="1" wheelIndex="10"/>
+        <speedRotatingPart node="rightArmRoller02" radius="0.2" groundReferenceNodeIndex="1" wheelIndex="10"/>
+        <speedRotatingPart node="singleDiscCenterFront" radius="0.2" groundReferenceNodeIndex="1" wheelIndex="10"/>
+        <speedRotatingPart shaderNode="discsCenterBack" radius="-0.2" groundReferenceNodeIndex="1" wheelIndex="10" vtxPositionArrayFilename="$data/vehicles/lemken/koralin9840/discsCenterBackArray.dds"/>
+        <speedRotatingPart shaderNode="discsCenterFront" radius="-0.2" groundReferenceNodeIndex="1" wheelIndex="10" vtxPositionArrayFilename="$data/vehicles/lemken/koralin9840/discsCenterFrontArray.dds"/>
+        <speedRotatingPart shaderNode="discsLeftFront" radius="-0.2" groundReferenceNodeIndex="1" wheelIndex="10" vtxPositionArrayFilename="$data/vehicles/lemken/koralin9840/discsLeftFrontArray.dds"/>
+        <speedRotatingPart shaderNode="discsLeftBack" radius="-0.2" groundReferenceNodeIndex="1" wheelIndex="10" vtxPositionArrayFilename="$data/vehicles/lemken/koralin9840/discsLeftBackArray.dds"/>
+        <speedRotatingPart shaderNode="discsRightFront" radius="-0.2" groundReferenceNodeIndex="1" wheelIndex="10" vtxPositionArrayFilename="$data/vehicles/lemken/koralin9840/discsRightFrontArray.dds"/>
+        <speedRotatingPart shaderNode="discsRightBack" radius="-0.2" groundReferenceNodeIndex="1" wheelIndex="10" vtxPositionArrayFilename="$data/vehicles/lemken/koralin9840/discsRightBackArray.dds"/>
+    </speedRotatingParts>
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" topReferenceNode="topReferenceNode" rootNode="koralin9840_attacher_component5" jointType="implement" lowerRotationOffset="-5" upperRotationOffset="-5" lowerRotLimitScale="0 0 0" allowsLowering="true">
+                <distanceToGround lower="0.5" upper="0.5"/>
+            </inputAttacherJoint>
+        </inputAttacherJoints>
+        <support animationName="moveSupport"/>
+        <support animationName="lockDrawbarLimit" delayedOnAttach="false" detachAfterAnimation="false"/>
+        <brakeForce force="1.4"/>
+    </attachable>
+    <licensePlates>
+        <licensePlate node="licensePlateBack" position="BACK" preferedType="SQUARISH" placementArea="0.06 0.3 0.3 0.3"/>
+    </licensePlates>
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulicIn01" length="1.1" diameter="0.015" straighteningFactor="2">
+            <objectChange node="hydraulicIn01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut01" length="1.1" diameter="0.015" straighteningFactor="2">
+            <objectChange node="hydraulicOut01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulicIn02" length="1.1" diameter="0.015" straighteningFactor="2">
+            <objectChange node="hydraulicIn02_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="electric" node="electricIn01" length="1.1" diameter="0.015" straighteningFactor="2">
+            <objectChange node="electricIn01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="airDoubleYellow" node="airIn01" length="1.1" diameter="0.015" straighteningFactor="2">
+            <objectChange node="airIn01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="airDoubleRed" node="airOut01" length="1.1" diameter="0.015" straighteningFactor="2">
+            <objectChange node="airOut01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+    </connectionHoses>
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn01_detachedAdapter" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicOut01_detachedAdapter" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn02_detachedAdapter" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|1" linkNode="electricIn01_detachedAdapter" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|2" linkNode="airIn01_detachedAdapter" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|3" linkNode="airOut01_detachedAdapter" filename="$data/shared/connectionHoses/connectors.i3d"/>
+    </dynamicallyLoadedParts>
+    <powerConsumer forceNode="koralin9840_main_component1" maxForce="44" neededMaxPtoPower="0"/>
+    <lights>
+        <sharedLight linkNode="redTriangle_02" filename="$data/shared/assets/reflectors/lizard/redTriangle_02.xml"/>
+        <sharedLight linkNode="redTriangle_03" filename="$data/shared/assets/reflectors/lizard/redTriangle_02.xml"/>
+        <sharedLight linkNode="yellowRound_02" filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_03" filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_04" filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_05" filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="lemkenLight_left" filename="$data/vehicles/lemken/karat12/lemkenLight_left.xml"/>
+        <sharedLight linkNode="lemkenLight_right" filename="$data/vehicles/lemken/karat12/lemkenLight_right.xml"/>
+        <realLights>
+            <high>
+                <light node="backLightsHigh1" lightTypes="0"/>
+                <light node="licensePlateLightHigh" lightTypes="0"/>
+                <brakeLight node="backLightsHigh1"/>
+                <turnLightLeft node="turnLightLeftBack"/>
+                <turnLightRight node="turnLightRightBack"/>
+                <reverseLight node="reverseLightHigh"/>
+            </high>
+        </realLights>
+        <defaultLights>
+            <defaultLight shaderNode="defaultLight_static" lightTypes="0"/>
+        </defaultLights>
+    </lights>
+    <groundReferenceNodes>
+        <groundReferenceNode node="groundRefNode" forceFactor="1" threshold="0.1" depthNode="depthNode" chargeValue="1"/>
+    </groundReferenceNodes>
+    <workAreas>
+        <workArea type="cultivator" functionName="processCultivatorArea">
+            <area startNode="workAreaStart" widthNode="workAreaWidth" heightNode="workAreaHeight"/>
+            <groundReferenceNode index="1"/>
+            <onlyActiveWhenLowered value="true"/>
+        </workArea>
+    </workAreas>
+    <workParticles>
+        <effect workAreaIndex="1">
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="rollerEffect01LinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/lemken/koralin9840/rollerEffect01Array.dds" numRows="20" rowLength="18" minFade="0.07" speedScale="1" density="1" densityScale="0.35"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="rollerEffect02LinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/lemken/koralin9840/rollerEffect01Array.dds" numRows="20" rowLength="18" minFade="0.07" speedScale="1" density="1" densityScale="0.35"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="rollerEffect03LinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/lemken/koralin9840/rollerEffect03Array.dds" numRows="20" rowLength="18" minFade="0.07" speedScale="1" density="1" densityScale="0.35"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="discEffect01LinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/lemken/koralin9840/discEffect01Array.dds" numRows="40" rowLength="18" minFade="0.07"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="discEffect02LinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/lemken/koralin9840/discEffect02Array.dds" numRows="40" rowLength="18" minFade="0.07"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="discEffect03LinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/lemken/koralin9840/discEffect03Array.dds" numRows="40" rowLength="18" minFade="0.07"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode01">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode02">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode03">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode04">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode05">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode06">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode07">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode08">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode09">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode10">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode11">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode12">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode13">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode14">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode15">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode16">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode17">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode18">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode19">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode20">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode21">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode22">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode23">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode24">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode25">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode26">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode27">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="sweepEffectLinkNode28">
+                <motionPathEffect textureFilename="$data/effects/cultivator/arrays/sharedCultivatorSweepArray01.dds" numRows="20" rowLength="18" minFade="0.07" isCultivatorSweepEffect="true"/>
+            </effectNode>
+        </effect>
+        <particle>
+            <node node="smokeEmitter" refNodeIndex="1" particleType="SOIL_SMOKE" emitCountScale="1"/>
+        </particle>
+    </workParticles>
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts startMoveDirection="1" foldMiddleAnimTime="0.25" detachingMinLimit="0" detachingMaxLimit="1">
+                    <foldingPart animationName="folding" speedScale="1"/>
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+    <animations>
+        <animation name="folding">
+            <!-- lowering discs -->
+            <part node="leftArmDiscArm01" startTime="0" endTime="1" startRot="-10 0 0" endRot="0 0 0"/>
+            <part node="centerDiscArm01" startTime="0" endTime="1" startRot="-10 0 0" endRot="0 0 0"/>
+            <part node="rightArmDiscArm01" startTime="0" endTime="1" startRot="-10 0 0" endRot="0 0 0"/>
+            <!-- height adjustment -->
+            <part node="axisBackLeft" startTime="1" endTime="2" startRot="8 0 0" endRot="0 0 0"/>
+            <part node="supportWheelBackLeft_phys" startTime="1" endTime="2" startRot="8 0 0" endRot="0 0 0"/>
+            <part node="axisBackLeftHydraulicPart" startTime="1" endTime="2" startTrans="0 0 -0.072" endTrans="0 0 0"/>
+            <part node="axisBackRight" startTime="1" endTime="2" startRot="8 0 0" endRot="0 0 0"/>
+            <part node="supportWheelBackRight_phys" startTime="1" endTime="2" startRot="8 0 0" endRot="0 0 0"/>
+            <part node="axisBackRightHydraulicPart" startTime="1" endTime="2" startTrans="0 0 -0.072" endTrans="0 0 0"/>
+            <part node="axisFrontCenter" startTime="0" endTime="1" startRot="-8 0 0" endRot="0 0 0"/>
+            <part node="axisFrontLeft" startTime="1" endTime="2" startRot="-8 0 0" endRot="0 0 0"/>
+            <part node="supportWheelFrontLeft_phys" startTime="1" endTime="2" startRot="-8 0 0" endRot="0 0 0"/>
+            <part node="axisFrontRight" startTime="1" endTime="2" startRot="-8 0 0" endRot="0 0 0"/>
+            <part node="supportWheelFrontRight_phys" startTime="1" endTime="2" startRot="-8 0 0" endRot="0 0 0"/>
+            <!-- lowering axis -->
+            <part node="axisBackCenter" startTime="0" endTime="2.5" startRot="-60 0 0" endRot="0 0 0"/>
+            <part node="componentJointDrawbar" requiredAnimation="moveSupport" requiredAnimationRange="0 0" startTime="0" endTime="2.5" startRot="-10 0 0" endRot="10 0 0"/>
+            <part componentJointIndex="1" startTime="0" endTime="2.5" startRotLimit="0 0 10" endRotLimit="0 0 0"/>
+            <part componentJointIndex="2" startTime="0" endTime="2.5" startRotLimit="0 0 10" endRotLimit="0 0 0"/>
+            <part componentJointIndex="3" startTime="0" endTime="1" startRotLimit="20 0 0" endRotLimit="0 0 0"/>
+            <!-- folding -->
+            <part node="componentJointLeftArm" startTime="2.9" endTime="10" startRot="0 0 0" endRot="0 0 90"/>
+            <part node="componentJointRightArm" startTime="2.5" endTime="9.6" startRot="0 0 0" endRot="0 0 -90"/>
+            <sound template="hydraulicLayerTone" startTime="2.5" endTime="9.6" volumeScale="1.2" pitchScale="0.6"/>
+            <sound template="hydraulicLayerTone" startTime="2.9" endTime="9.99" volumeScale="1" pitchScale="0.8"/>
+            <sound template="defaultHydraulicSmall" startTime="0.01" endTime="2.5" volumeScale="1.5" pitchScale="1"/>
+            <sound template="loopLayer1Small" startTime="0.01" endTime="2.5" volumeScale="1" pitchScale="1"/>
+            <sound template="clackVar2Small" startTime="9.99" volumeScale="1" pitchScale="1"/>
+            <sound template="clackVar2" startTime="9.99" volumeScale="1" pitchScale="1"/>
+            <sound template="foldStartMed02" startTime="9.99" volumeScale="2" pitchScale="0.8"/>
+            <sound template="clackVar4" startTime="9.99" direction="1" volumeScale="1" pitchScale="1"/>
+            <sound template="clackVar3" startTime="9.6" volumeScale="1" pitchScale="1"/>
+            <sound template="clackVar2" startTime="9.6" volumeScale="1" pitchScale="1"/>
+            <sound template="sheetImp02" startTime="9.6" volumeScale="2.4" pitchScale="0.7"/>
+            <sound template="clackVar4" startTime="3" direction="-1" volumeScale="1.7" pitchScale="0.7"/>
+            <sound template="foldStartMed02" startTime="3" direction="-1" volumeScale="2.2" pitchScale="0.7"/>
+            <sound template="sheetImp02" startTime="2.51" direction="-1" volumeScale="2.3" pitchScale="0.7"/>
+            <sound template="clackVar2" startTime="2.51" direction="-1" volumeScale="1" pitchScale="1"/>
+            <sound template="clackVar2Small" startTime="2.51" direction="1" volumeScale="1" pitchScale="1"/>
+            <sound template="clackVar4" startTime="2.51" direction="1" volumeScale="1.9" pitchScale="0.7"/>
+            <sound template="clackVar2" startTime="3.0" volumeScale="1" pitchScale="1"/>
+            <sound template="foldStartMed02" startTime="3.0" volumeScale="2.2" pitchScale="0.6"/>
+            <sound template="clackVar3" startTime="2.5" direction="-1" volumeScale="1" pitchScale="1"/>
+            <sound template="sheetImp02" startTime="2.5" direction="-1" volumeScale="2" pitchScale="0.7"/>
+            <sound template="foldStartMed02" startTime="2.49" direction="-1" volumeScale="3" pitchScale="0.7"/>
+            <sound template="sheetImp02" startTime="2.49" direction="-1" volumeScale="3" pitchScale="0.7"/>
+            <sound template="clackVar2Small" startTime="0.01" direction="1" volumeScale="1" pitchScale="1"/>
+            <sound template="clackVar4" startTime="0.01" direction="1" volumeScale="2.4" pitchScale="0.7"/>
+            <sound template="clackVar2" startTime="1.2" direction="1" volumeScale="1" pitchScale="1"/>
+            <sound template="foldStartMed02" startTime="1" direction="1" volumeScale="1.8" pitchScale="0.5"/>
+            <sound template="clackVar3" startTime="1.2" direction="-1" volumeScale="1" pitchScale="1"/>
+            <sound template="sheetImp02" startTime="1.2" direction="-1" volumeScale="1.4" pitchScale="0.8"/>
+            <sound template="foldStartMed02" startTime="1" direction="-1" volumeScale="2.4" pitchScale="0.8"/>
+            <sound template="clackVar4" startTime="1" direction="-1" volumeScale="1.4" pitchScale="0.8"/>
+            <sound template="clackVar6" startTime="0.01" direction="-1" volumeScale="1.4" pitchScale="0.6"/>
+            <sound template="sheetImp02" startTime="0.01" direction="-1" volumeScale="1.5" pitchScale="1.6"/>
+            <sound template="metalClose" startTime="0.1" direction="-1" volumeScale="1.8" pitchScale="0.4"/>
+            <sound template="sheetImp02" startTime="2.49" direction="1" volumeScale="2.1" pitchScale="0.8"/>
+            <sound template="clackVar5" startTime="2.49" direction="1" volumeScale="1.1" pitchScale="0.6"/>
+            <sound template="clickLong" startTime="2.7" direction="1" volumeScale="2.3" pitchScale="0.7"/>
+        </animation>
+        <animation name="moveSupport">
+            <part node="componentJointDrawbar" startTime="0" endTime="1" startRot="10 0 0" endRot="-5 0 0"/>
+            <sound template="hydraulicLayerTone" startTime="0.01" endTime="0.99" volumeScale="0.6" pitchScale="0.6"/>
+            <sound template="foldStartMed02" startTime="0.01" direction="-1" volumeScale="2" pitchScale="1"/>
+        </animation>
+        <animation name="lockDrawbarLimit">
+            <part componentJointIndex="4" startTime="0.0" endTime="0.1" startRotLimit="25 90 25" endRotLimit="0 0 0"/>
+        </animation>
+    </animations>
+    <cylindered>
+        <movingTools>
+            <movingTool node="axisBackCenter" wheelIndices="1 2">
+                <dependentPart node="axisBackCenterHydraulic"/>
+            </movingTool>
+            <movingTool node="componentJointLeftArm">
+                <componentJoint index="1"/>
+            </movingTool>
+            <movingTool node="componentJointRightArm">
+                <componentJoint index="2"/>
+            </movingTool>
+            <movingTool node="componentJointDrawbar">
+                <componentJoint index="3"/>
+            </movingTool>
+            <movingTool node="axisFrontLeft" playSound="true" wheelIndices="3">
+                <dependentPart node="axisFrontLeftHydraulic"/>
+            </movingTool>
+            <movingTool node="axisFrontCenter" playSound="true" wheelIndices="4">
+                <dependentPart node="axisFrontCenterHydraulic"/>
+            </movingTool>
+            <movingTool node="axisFrontRight" playSound="true" wheelIndices="5">
+                <dependentPart node="axisFrontRightHydraulic"/>
+            </movingTool>
+            <movingTool node="axisBackLeft" playSound="true" wheelIndices="6">
+                <dependentPart node="axisBackLeftHydraulic"/>
+            </movingTool>
+            <movingTool node="axisBackRight" playSound="true" wheelIndices="7">
+                <dependentPart node="axisBackRightHydraulic"/>
+            </movingTool>
+            <movingTool node="leftArmDiscArm01" playSound="true">
+                <dependentPart node="leftArmDiscArmConnection"/>
+            </movingTool>
+            <movingTool node="centerDiscArm01" playSound="true">
+                <dependentPart node="centerDiscArmConnection"/>
+            </movingTool>
+            <movingTool node="rightArmDiscArm01" playSound="true">
+                <dependentPart node="rightArmDiscArmConnection"/>
+            </movingTool>
+        </movingTools>
+        <movingParts>
+            <movingPart node="leftArm" referencePoint="leftArmRef" referenceFrame="leftArmRef" isActiveDirty="true" maxUpdateDistance="300"/>
+            <movingPart node="rightArm" referencePoint="rightArmRef" referenceFrame="rightArmRef" isActiveDirty="true" maxUpdateDistance="300"/>
+            <movingPart node="axisBackCenterHydraulic" referencePoint="axisBackCenterHydraulicRef" referenceFrame="axisBackCenterHydraulicRef">
+                <translatingPart node="axisBackCenterHydraulicPunch"/>
+            </movingPart>
+            <movingPart node="leftArmHydraulic" referencePoint="leftArmHydraulicRef" referenceFrame="leftArmHydraulicRef" isActiveDirty="true" maxUpdateDistance="300">
+                <translatingPart node="leftArmHydraulicPunch"/>
+            </movingPart>
+            <movingPart node="rightArmHydraulic" referencePoint="rightArmHydraulicRef" referenceFrame="rightArmHydraulicRef" isActiveDirty="true" maxUpdateDistance="300">
+                <translatingPart node="rightArmHydraulicPunch"/>
+            </movingPart>
+            <movingPart node="drawbarLeftHydraulic" referencePoint="drawbarLeftHydraulicRef" referenceFrame="drawbarLeftHydraulicRef" isActiveDirty="true" maxUpdateDistance="50">
+                <translatingPart node="drawbarLeftHydraulicPunch"/>
+            </movingPart>
+            <movingPart node="drawbarRightHydraulic" referencePoint="drawbarRightHydraulicRef" referenceFrame="drawbarRightHydraulicRef" isActiveDirty="true" maxUpdateDistance="50">
+                <translatingPart node="drawbarRightHydraulicPunch"/>
+            </movingPart>
+            <movingPart node="axisFrontLeftHydraulic" referencePoint="axisFrontLeftHydraulicRef" referenceFrame="axisFrontLeftHydraulicRef">
+                <translatingPart node="axisFrontLeftHydraulicPunch"/>
+            </movingPart>
+            <movingPart node="axisFrontCenterHydraulic" referencePoint="axisFrontCenterHydraulicRef" referenceFrame="axisFrontCenterHydraulicRef">
+                <translatingPart node="axisFrontCenterHydraulicPunch"/>
+            </movingPart>
+            <movingPart node="axisFrontRightHydraulic" referencePoint="axisFrontRightHydraulicRef" referenceFrame="axisFrontRightHydraulicRef">
+                <translatingPart node="axisFrontRightHydraulicPunch"/>
+            </movingPart>
+            <movingPart node="axisBackLeftHydraulic" referencePoint="axisBackLeftHydraulicRef" referenceFrame="axisBackLeftHydraulicRef">
+                <translatingPart node="axisBackLeftHydraulicPunch"/>
+            </movingPart>
+            <movingPart node="axisBackRightHydraulic" referencePoint="axisBackRightHydraulicRef" referenceFrame="axisBackRightHydraulicRef">
+                <translatingPart node="axisBackRightHydraulicPunch"/>
+            </movingPart>
+            <movingPart node="leftArmDiscArmConnection" localReferencePoint="leftArmDiscArm02" referencePoint="leftArmDiscArm02Ref" referenceFrame="leftArmDiscArmConnectionRefFrame">
+                <dependentPart node="leftArmDiscArm02"/>
+                <dependentPart node="leftArmDiscArmHydraulic"/>
+            </movingPart>
+            <movingPart node="leftArmDiscArm02" referencePoint="leftArmDiscArm02Ref" referenceFrame="leftArmDiscArm02Ref"/>
+            <movingPart node="leftArmDiscArmHydraulic" referencePoint="leftArmDiscArmHydraulicRef" referenceFrame="leftArmDiscArmHydraulicRef">
+                <translatingPart node="leftArmDiscArmHydraulicPunch"/>
+            </movingPart>
+            <movingPart node="centerDiscArmConnection" localReferencePoint="centerDiscArm02" referencePoint="centerDiscArm02Ref" referenceFrame="centerDiscArmConnectionRefFrame">
+                <dependentPart node="centerDiscArm02"/>
+                <dependentPart node="centerDiscArmHydraulic"/>
+            </movingPart>
+            <movingPart node="centerDiscArm02" referencePoint="centerDiscArm02Ref" referenceFrame="centerDiscArm02Ref"/>
+            <movingPart node="centerDiscArmHydraulic" referencePoint="centerDiscArmHydraulicRef" referenceFrame="centerDiscArmHydraulicRef">
+                <translatingPart node="centerDiscArmHydraulicPunch"/>
+            </movingPart>
+            <movingPart node="rightArmDiscArmConnection" localReferencePoint="rightArmDiscArm02" referencePoint="rightArmDiscArm02Ref" referenceFrame="rightArmDiscArmConnectionRefFrame">
+                <dependentPart node="rightArmDiscArm02"/>
+                <dependentPart node="rightArmDiscArmHydraulic"/>
+            </movingPart>
+            <movingPart node="rightArmDiscArm02" referencePoint="rightArmDiscArm02Ref" referenceFrame="rightArmDiscArm02Ref"/>
+            <movingPart node="rightArmDiscArmHydraulic" referencePoint="rightArmDiscArmHydraulicRef" referenceFrame="rightArmDiscArmHydraulicRef">
+                <translatingPart node="rightArmDiscArmHydraulicPunch"/>
+            </movingPart>
+        </movingParts>
+    </cylindered>
+    <cultivator useDeepMode="false">
+        <sounds>
+            <work template="DEFAULT_CULTIVATOR_WORK" linkNode="koralin9840_main_component1"/>
+        </sounds>
+        <directionNode node="koralin9840_main_component1"/>
+        <onlyActiveWhenLowered value="true"/>
+    </cultivator>
+    <ai>
+        <needsLowering value="true"/>
+        <areaMarkers leftNode="aiMarkerLeft" rightNode="aiMarkerRight" backNode="aiMarkerBack"/>
+        <collisionTrigger node="aiCollisionNode" width="8.6" height="2.0"/>
+        <allowTurnBackward value="false"/>
+        <turningRadiusLimitation rotationJointNode="componentJointAttacher" wheelIndices="1 2"/>
+        <toolReverserDirectionNode node="aiMarkerBack"/>
+        <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2" width="3.2" height="4.35" length="7.5" lengthOffset="0.55"/>
+    </ai>
+    <foliageBending>
+        <bendingNode minX="-1.45" maxX="1.45" minZ="-3.9" maxZ="3.6" yOffset="0.7"/>
+        <bendingNode minX="-0.4" maxX="0.4" minZ="-0.1" maxZ="2" yOffset="-0.1" node="drawbar"/>
+        <bendingNode minX="-2.1" maxX="4.7" minZ="0.45" maxZ="3.35" yOffset="-0.3" node="leftArm"/>
+        <bendingNode minX="-4.7" maxX="2.1" minZ="0.45" maxZ="3.35" yOffset="-0.3" node="rightArm"/>
+    </foliageBending>
+    <baseMaterial>
+        <material name="koralin9840_mat" baseNode="koralin9840_vis">
+            <shaderParameter name="colorMat0" value="LEMKEN_BLUE1"/>
+        </material>
+        <material name="koralin9840Alpha_mat" baseNode="koralin9840Alpha">
+            <shaderParameter name="colorMat0" value="LEMKEN_BLUE1"/>
+        </material>
+        <material name="koralin9840Disc1_mat" baseNode="discsCenterBack">
+            <shaderParameter name="colorMat0" value="LEMKEN_BLUE1"/>
+        </material>
+    </baseMaterial>
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="6" fieldMultiplier="2"/>
+    <i3dMappings>
+        <i3dMapping id="koralin9840_main_component1" node="0>"/>
+        <i3dMapping id="redTriangle_02" node="0>0|0|0|0"/>
+        <i3dMapping id="redTriangle_03" node="0>0|0|0|1"/>
+        <i3dMapping id="yellowRound_02" node="0>0|0|0|2"/>
+        <i3dMapping id="yellowRound_03" node="0>0|0|0|3"/>
+        <i3dMapping id="yellowRound_04" node="0>0|0|0|4"/>
+        <i3dMapping id="yellowRound_05" node="0>0|0|0|5"/>
+        <i3dMapping id="lemkenLight_left" node="0>0|0|0|6"/>
+        <i3dMapping id="lemkenLight_right" node="0>0|0|0|7"/>
+        <i3dMapping id="defaultLight_static" node="0>0|0|1|0"/>
+        <i3dMapping id="backLightsHigh1" node="0>0|0|2|0"/>
+        <i3dMapping id="licensePlateLightHigh" node="0>0|0|2|1"/>
+        <i3dMapping id="turnLightLeftBack" node="0>0|0|3|0"/>
+        <i3dMapping id="turnLightRightBack" node="0>0|0|3|1"/>
+        <i3dMapping id="reverseLightHigh" node="0>0|0|4|0"/>
+        <i3dMapping id="axisBackCenter" node="0>0|1|0"/>
+        <i3dMapping id="wheelLeft" node="0>0|1|0|0"/>
+        <i3dMapping id="wheelRight" node="0>0|1|0|1"/>
+        <i3dMapping id="axisBackCenterHydraulicRef" node="0>0|1|0|2"/>
+        <i3dMapping id="axisBackCenterHydraulic" node="0>0|1|1"/>
+        <i3dMapping id="axisBackCenterHydraulicPunch" node="0>0|1|1|0"/>
+        <i3dMapping id="leftArm" node="0>0|1|2"/>
+        <i3dMapping id="leftArmHydraulicRef" node="0>0|1|2|0"/>
+        <i3dMapping id="leftArmDiscArmConnectionRefFrame" node="0>0|1|2|1|0"/>
+        <i3dMapping id="leftArmDiscArm01" node="0>0|1|2|1|1"/>
+        <i3dMapping id="leftArmDiscArmConnection" node="0>0|1|2|1|1|0"/>
+        <i3dMapping id="leftArmDiscArm02" node="0>0|1|2|1|1|0|0"/>
+        <i3dMapping id="discsLeftBack" node="0>0|1|2|1|1|0|0|0"/>
+        <i3dMapping id="leftArmDiscArmHydraulicRef" node="0>0|1|2|1|1|0|1"/>
+        <i3dMapping id="discsLeftFront" node="0>0|1|2|1|1|1"/>
+        <i3dMapping id="leftArmDiscArm02Ref" node="0>0|1|2|2"/>
+        <i3dMapping id="leftArmRoller01" node="0>0|1|2|3|0"/>
+        <i3dMapping id="leftArmRoller02" node="0>0|1|2|4|0"/>
+        <i3dMapping id="axisBackLeft" node="0>0|1|2|5|0"/>
+        <i3dMapping id="axisBackLeftHydraulicRef" node="0>0|1|2|5|0|0"/>
+        <i3dMapping id="axisBackLeftHydraulic" node="0>0|1|2|6"/>
+        <i3dMapping id="axisBackLeftHydraulicPart" node="0>0|1|2|6|0"/>
+        <i3dMapping id="axisBackLeftHydraulicPunch" node="0>0|1|2|6|1"/>
+        <i3dMapping id="leftArmDiscArmHydraulic" node="0>0|1|2|7"/>
+        <i3dMapping id="leftArmDiscArmHydraulicPunch" node="0>0|1|2|7|0"/>
+        <i3dMapping id="axisFrontLeft" node="0>0|1|2|8|0"/>
+        <i3dMapping id="axisFrontLeftHydraulicRef" node="0>0|1|2|8|0|0"/>
+        <i3dMapping id="axisFrontLeftHydraulic" node="0>0|1|2|9"/>
+        <i3dMapping id="axisFrontLeftHydraulicPunch" node="0>0|1|2|9|0"/>
+        <i3dMapping id="rollerEffect01LinkNode" node="0>0|1|2|12|0"/>
+        <i3dMapping id="discEffect01LinkNode" node="0>0|1|2|12|1"/>
+        <i3dMapping id="sweepEffectLinkNode01" node="0>0|1|2|12|2"/>
+        <i3dMapping id="sweepEffectLinkNode02" node="0>0|1|2|12|3"/>
+        <i3dMapping id="sweepEffectLinkNode03" node="0>0|1|2|12|4"/>
+        <i3dMapping id="sweepEffectLinkNode04" node="0>0|1|2|12|5"/>
+        <i3dMapping id="sweepEffectLinkNode05" node="0>0|1|2|12|6"/>
+        <i3dMapping id="sweepEffectLinkNode06" node="0>0|1|2|12|7"/>
+        <i3dMapping id="sweepEffectLinkNode07" node="0>0|1|2|12|8"/>
+        <i3dMapping id="sweepEffectLinkNode08" node="0>0|1|2|12|9"/>
+        <i3dMapping id="sweepEffectLinkNode09" node="0>0|1|2|12|10"/>
+        <i3dMapping id="sweepEffectLinkNode10" node="0>0|1|2|12|11"/>
+        <i3dMapping id="rightArm" node="0>0|1|3"/>
+        <i3dMapping id="rightArmHydraulicRef" node="0>0|1|3|0"/>
+        <i3dMapping id="axisBackRight" node="0>0|1|3|1|0"/>
+        <i3dMapping id="axisBackRightHydraulicRef" node="0>0|1|3|1|0|0"/>
+        <i3dMapping id="axisBackRightHydraulic" node="0>0|1|3|2"/>
+        <i3dMapping id="axisBackRightHydraulicPart" node="0>0|1|3|2|0"/>
+        <i3dMapping id="axisBackRightHydraulicPunch" node="0>0|1|3|2|1"/>
+        <i3dMapping id="rightArmDiscArmHydraulic" node="0>0|1|3|3"/>
+        <i3dMapping id="rightArmDiscArmHydraulicPunch" node="0>0|1|3|3|0"/>
+        <i3dMapping id="axisFrontRight" node="0>0|1|3|4|0"/>
+        <i3dMapping id="axisFrontRightHydraulicRef" node="0>0|1|3|4|0|0"/>
+        <i3dMapping id="axisFrontRightHydraulic" node="0>0|1|3|5"/>
+        <i3dMapping id="axisFrontRightHydraulicPunch" node="0>0|1|3|5|0"/>
+        <i3dMapping id="rightArmDiscArm02Ref" node="0>0|1|3|6"/>
+        <i3dMapping id="rightArmDiscArmConnectionRefFrame" node="0>0|1|3|7"/>
+        <i3dMapping id="rightArmDiscArm01" node="0>0|1|3|8|0"/>
+        <i3dMapping id="rightArmDiscArmConnection" node="0>0|1|3|8|0|0"/>
+        <i3dMapping id="rightArmDiscArm02" node="0>0|1|3|8|0|0|0"/>
+        <i3dMapping id="discsRightBack" node="0>0|1|3|8|0|0|0|0"/>
+        <i3dMapping id="rightArmDiscArmHydraulicRef" node="0>0|1|3|8|0|0|1"/>
+        <i3dMapping id="discsRightFront" node="0>0|1|3|8|0|1"/>
+        <i3dMapping id="rightArmRoller01" node="0>0|1|3|9|0"/>
+        <i3dMapping id="rightArmRoller02" node="0>0|1|3|10|0"/>
+        <i3dMapping id="rollerEffect02LinkNode" node="0>0|1|3|13|0"/>
+        <i3dMapping id="discEffect02LinkNode" node="0>0|1|3|13|1"/>
+        <i3dMapping id="sweepEffectLinkNode11" node="0>0|1|3|13|2"/>
+        <i3dMapping id="sweepEffectLinkNode12" node="0>0|1|3|13|3"/>
+        <i3dMapping id="sweepEffectLinkNode13" node="0>0|1|3|13|4"/>
+        <i3dMapping id="sweepEffectLinkNode14" node="0>0|1|3|13|5"/>
+        <i3dMapping id="sweepEffectLinkNode15" node="0>0|1|3|13|6"/>
+        <i3dMapping id="sweepEffectLinkNode16" node="0>0|1|3|13|7"/>
+        <i3dMapping id="sweepEffectLinkNode17" node="0>0|1|3|13|8"/>
+        <i3dMapping id="sweepEffectLinkNode18" node="0>0|1|3|13|9"/>
+        <i3dMapping id="sweepEffectLinkNode19" node="0>0|1|3|13|10"/>
+        <i3dMapping id="sweepEffectLinkNode20" node="0>0|1|3|13|11"/>
+        <i3dMapping id="centerDiscArm02Ref" node="0>0|1|4"/>
+        <i3dMapping id="centerDiscArm01" node="0>0|1|5"/>
+        <i3dMapping id="centerDiscArmConnectionRefFrame" node="0>0|1|5|0"/>
+        <i3dMapping id="centerDiscArmConnection" node="0>0|1|5|1"/>
+        <i3dMapping id="centerDiscArm02" node="0>0|1|5|1|0"/>
+        <i3dMapping id="discsCenterFront" node="0>0|1|5|1|0|0"/>
+        <i3dMapping id="singleDiscCenterFront" node="0>0|1|5|1|0|1|0"/>
+        <i3dMapping id="centerDiscArmHydraulicRef" node="0>0|1|5|1|1"/>
+        <i3dMapping id="discsCenterBack" node="0>0|1|5|2"/>
+        <i3dMapping id="drawbarLeftHydraulic" node="0>0|1|6"/>
+        <i3dMapping id="drawbarLeftHydraulicPunch" node="0>0|1|6|0"/>
+        <i3dMapping id="drawbarRightHydraulic" node="0>0|1|7"/>
+        <i3dMapping id="drawbarRightHydraulicPunch" node="0>0|1|7|0"/>
+        <i3dMapping id="leftArmHydraulic" node="0>0|1|8"/>
+        <i3dMapping id="leftArmHydraulicPunch" node="0>0|1|8|0"/>
+        <i3dMapping id="rightArmHydraulic" node="0>0|1|9"/>
+        <i3dMapping id="rightArmHydraulicPunch" node="0>0|1|9|0"/>
+        <i3dMapping id="centerDiscArmHydraulic" node="0>0|1|10"/>
+        <i3dMapping id="centerDiscArmHydraulicPunch" node="0>0|1|10|0"/>
+        <i3dMapping id="axisFrontCenter" node="0>0|1|11"/>
+        <i3dMapping id="axisFrontCenterHydraulicRef" node="0>0|1|11|0"/>
+        <i3dMapping id="supportWheelFrontCenter" node="0>0|1|11|1"/>
+        <i3dMapping id="axisFrontCenterHydraulic" node="0>0|1|12"/>
+        <i3dMapping id="axisFrontCenterHydraulicPunch" node="0>0|1|12|0"/>
+        <i3dMapping id="centerRoller01" node="0>0|1|13"/>
+        <i3dMapping id="centerRoller02" node="0>0|1|14"/>
+        <i3dMapping id="supportWheelRollerCenter" node="0>0|1|15"/>
+        <i3dMapping id="workAreaStart" node="0>0|2|0"/>
+        <i3dMapping id="workAreaWidth" node="0>0|2|1"/>
+        <i3dMapping id="workAreaHeight" node="0>0|2|2"/>
+        <i3dMapping id="groundRefNode" node="0>0|2|3"/>
+        <i3dMapping id="depthNode" node="0>0|2|4"/>
+        <i3dMapping id="aiMarkerLeft" node="0>0|3|0"/>
+        <i3dMapping id="aiMarkerRight" node="0>0|3|1"/>
+        <i3dMapping id="aiMarkerBack" node="0>0|3|2"/>
+        <i3dMapping id="aiCollisionNode" node="0>0|3|3"/>
+        <i3dMapping id="componentJointLeftArm" node="0>0|4"/>
+        <i3dMapping id="componentJointRightArm" node="0>0|5"/>
+        <i3dMapping id="componentJointDrawbar" node="0>0|6"/>
+        <i3dMapping id="rollerEffect03LinkNode" node="0>0|7|0"/>
+        <i3dMapping id="discEffect03LinkNode" node="0>0|7|1"/>
+        <i3dMapping id="sweepEffectLinkNode21" node="0>0|7|2"/>
+        <i3dMapping id="sweepEffectLinkNode22" node="0>0|7|3"/>
+        <i3dMapping id="sweepEffectLinkNode23" node="0>0|7|4"/>
+        <i3dMapping id="sweepEffectLinkNode24" node="0>0|7|5"/>
+        <i3dMapping id="sweepEffectLinkNode25" node="0>0|7|6"/>
+        <i3dMapping id="sweepEffectLinkNode26" node="0>0|7|7"/>
+        <i3dMapping id="sweepEffectLinkNode27" node="0>0|7|8"/>
+        <i3dMapping id="sweepEffectLinkNode28" node="0>0|7|9"/>
+        <i3dMapping id="smokeEmitter" node="0>0|7|10"/>
+        <i3dMapping id="licensePlateBack" node="0>0|8|0"/>
+        <i3dMapping id="koralin9840Alpha" node="0>0|8|2"/>
+        <i3dMapping id="koralin9840_vis" node="0>0|8|5|0"/>
+        <i3dMapping id="koralin9840_leftArm_component2" node="1>"/>
+        <i3dMapping id="supportWheelRollerLeft" node="1>0"/>
+        <i3dMapping id="leftArmRef" node="1>1"/>
+        <i3dMapping id="supportWheelBackLeft_phys" node="1>2"/>
+        <i3dMapping id="supportWheelBackLeft" node="1>2|0"/>
+        <i3dMapping id="supportWheelFrontLeft_phys" node="1>3"/>
+        <i3dMapping id="supportWheelFrontLeft" node="1>3|0"/>
+        <i3dMapping id="koralin9840_rightArm_component3" node="2>"/>
+        <i3dMapping id="supportWheelRollerRight" node="2>0"/>
+        <i3dMapping id="rightArmRef" node="2>1"/>
+        <i3dMapping id="supportWheelBackRight_phys" node="2>2"/>
+        <i3dMapping id="supportWheelBackRight" node="2>2|0"/>
+        <i3dMapping id="supportWheelFrontRight_phys" node="2>3"/>
+        <i3dMapping id="supportWheelFrontRight" node="2>3|0"/>
+        <i3dMapping id="koralin9840_drawbar_component4" node="3>"/>
+        <i3dMapping id="componentJointAttacher" node="3>0"/>
+        <i3dMapping id="drawbar" node="3>1"/>
+        <i3dMapping id="drawbarLeftHydraulicRef" node="3>1|0"/>
+        <i3dMapping id="drawbarRightHydraulicRef" node="3>1|1"/>
+        <i3dMapping id="koralin9840_attacher_component5" node="4>"/>
+        <i3dMapping id="hydraulicIn01_detached" node="4>0|0|0"/>
+        <i3dMapping id="hydraulicIn01_detachedAdapter" node="4>0|0|0|0"/>
+        <i3dMapping id="hydraulicOut01_detached" node="4>0|0|1"/>
+        <i3dMapping id="hydraulicOut01_detachedAdapter" node="4>0|0|1|0"/>
+        <i3dMapping id="hydraulicIn02_detached" node="4>0|0|2"/>
+        <i3dMapping id="hydraulicIn02_detachedAdapter" node="4>0|0|2|0"/>
+        <i3dMapping id="electricIn01_detached" node="4>0|0|3"/>
+        <i3dMapping id="electricIn01_detachedAdapter" node="4>0|0|3|0"/>
+        <i3dMapping id="airIn01_detached" node="4>0|0|4"/>
+        <i3dMapping id="airIn01_detachedAdapter" node="4>0|0|4|0"/>
+        <i3dMapping id="airOut01_detached" node="4>0|0|5"/>
+        <i3dMapping id="airOut01_detachedAdapter" node="4>0|0|5|0"/>
+        <i3dMapping id="airOut01" node="4>0|0|6"/>
+        <i3dMapping id="airIn01" node="4>0|0|7"/>
+        <i3dMapping id="electricIn01" node="4>0|0|8"/>
+        <i3dMapping id="hydraulicIn02" node="4>0|0|9"/>
+        <i3dMapping id="hydraulicOut01" node="4>0|0|10"/>
+        <i3dMapping id="hydraulicIn01" node="4>0|0|11"/>
+        <i3dMapping id="attacherJoint" node="4>1"/>
+        <i3dMapping id="topReferenceNode" node="4>2"/>
+    </i3dMappings>
+</vehicle>
