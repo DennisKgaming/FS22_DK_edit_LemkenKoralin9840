@@ -1,15 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="60">
-    <author>dkuij</author>
+
+    <author>DennisK</author>
+	
     <version>1.0.0.0</version>
+	
     <title>
-        <en>My Mod Name</en>
+        <en>Lemken Koralin 9/840 DK edit</en>
     </title>
+	
     <description>
         <en>My Mod Description</en>
     </description>
-    <iconFilename>icon.png</iconFilename>
+	
+    <iconFilename>icons/icon_koralin9840.png</iconFilename>
+	
     <storeItems>
-        <storeItem xmlFilename="koralin9840.xml"/>
+        <storeItem xmlFilename="xml/koralin9840.xml"/>
     </storeItems>
 </modDesc>
