@@ -18,4 +18,11 @@
     <storeItems>
         <storeItem xmlFilename="xml/koralin9840.xml"/>
     </storeItems>
+	
+	<extraSourceFiles>
+        <sourceFile filename="scripts/categorizer.lua"/>
+    </extraSourceFiles>
+	
+	<newcategory name="DennisKtools" title="DennisK" type="TOOL" img="Categories/CategoryTools.png" />
+	
 </modDesc>

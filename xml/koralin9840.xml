@@ -19,7 +19,7 @@
         <lifetime>600</lifetime>
         <rotation>0</rotation>
         <brand>LEMKEN</brand>
-        <category>cultivators</category>
+        <category>DennisKtools</category>
         <shopTranslationOffset>0 -0.094 0</shopTranslationOffset>
         <shopRotationOffset>5.741 0 0.088</shopRotationOffset>
         <vertexBufferMemoryUsage>7053568</vertexBufferMemoryUsage>
@@ -34,7 +34,7 @@
         <typeDesc>$l10n_typeDesc_cultivator</typeDesc>
         <filename>i3d/koralin9840.i3d</filename>
         <size width="4.2" length="11" height="4.5" lengthOffset="1.1"/>
-        <speedLimit value="15"/>
+        <speedLimit value="25"/>
         <components>
             <component centerOfMass="0 0.6 0.5" solverIterationCount="20" mass="5860"/>
             <component centerOfMass="1 0 0" solverIterationCount="10" mass="250"/>
@@ -52,7 +52,43 @@
     
 	<wheels>
         <wheelConfigurations>
-            <wheelConfiguration name="$l10n_configuration_valueDefault" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT">
+            <wheelConfiguration name="Default Special" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT_SPECIAL">
+                <wheels>
+                    <wheel filename="wheels/tires/trelleborg/T404/400_55R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="2.9" repr="wheelLeft" forcePointRatio="0.35" initialCompression="40" suspTravel="0.15" spring="44" damper="20" supportsWheelSink="false"/>
+                        <wheelChock/>
+                        <wheelChock isInverted="true"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/trelleborg/T404/400_55R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="2.9" repr="wheelRight" forcePointRatio="0.35" initialCompression="40" suspTravel="0.15" spring="44" damper="20" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/trelleborg/AW305/340_55R16.xml" isLeft="true">
+                        <physics restLoad="0.2" repr="supportWheelFrontLeft" forcePointRatio="0.25" mass="0.05" initialCompression="25" suspTravel="0.1" spring="5" damper="10" yOffset="0" brakeFactor="0" rotationDamping="0.005" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/trelleborg/AW305/340_55R16.xml" isLeft="false">
+                        <physics restLoad="1.6" repr="supportWheelFrontCenter" forcePointRatio="0.25" mass="0.05" initialCompression="25" suspTravel="0.1" spring="42" damper="30" yOffset="0.04" brakeFactor="0" rotationDamping="0.005" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/trelleborg/AW305/340_55R16.xml" isLeft="false">
+                        <physics restLoad="0.2" repr="supportWheelFrontRight" forcePointRatio="0.25" mass="0.05" initialCompression="25" suspTravel="0.1" spring="5" damper="10" yOffset="0" brakeFactor="0" rotationDamping="0.005" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/trelleborg/AW305/260_70R15_3.xml" isLeft="true">
+                        <physics restLoad="0.2" repr="supportWheelBackLeft" forcePointRatio="0.25" mass="0.05" initialCompression="25" suspTravel="0.1" spring="5" damper="10" yOffset="0" brakeFactor="0" rotationDamping="0.005" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/trelleborg/AW305/260_70R15_3.xml" isLeft="false">
+                        <physics restLoad="0.2" repr="supportWheelBackRight" forcePointRatio="0.25" mass="0.05" initialCompression="25" suspTravel="0.1" spring="5" damper="10" yOffset="0" brakeFactor="0" rotationDamping="0.005" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="0.2" repr="supportWheelRollerLeft" forcePointRatio="0.25" radius="0.16" width="0.3" mass="0.05" initialCompression="25" suspTravel="0.1" spring="15" damper="10" yOffset="0.02" brakeFactor="0" rotationDamping="0.008" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="0.2" repr="supportWheelRollerCenter" forcePointRatio="0.25" radius="0.16" width="0.3" mass="0.05" initialCompression="25" suspTravel="0.1" spring="25" damper="10" yOffset="0.02" brakeFactor="0" rotationDamping="0.008" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="0.2" repr="supportWheelRollerRight" forcePointRatio="0.25" radius="0.16" width="0.3" mass="0.05" initialCompression="25" suspTravel="0.1" spring="15" damper="10" yOffset="0.02" brakeFactor="0" rotationDamping="0.008" supportsWheelSink="false"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueDefault" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT">
                 <wheels>
                     <wheel filename="$data/shared/wheels/tires/trelleborg/T404/400_55R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics restLoad="2.9" repr="wheelLeft" forcePointRatio="0.35" initialCompression="40" suspTravel="0.15" spring="44" damper="20" supportsWheelSink="false"/>
@@ -91,7 +127,7 @@
         </wheelConfigurations>
         <rimColor>LEMKEN_RED1</rimColor>
         <hubs>
-            <color0>LEMKEN_BLUE1</color0>
+            <color0 useBaseColor="true"/>
             <color1>SHARED_GREY3</color1>
             <hub linkNode="wheelLeft" filename="$data/shared/wheels/hubs/hub_n10_18.xml" isLeft="true" scale="0.285 0.285 0.285" offset="0.012"/>
             <hub linkNode="wheelRight" filename="$data/shared/wheels/hubs/hub_n10_18.xml" isLeft="false" scale="0.285 0.285 0.285" offset="0.012"/>
@@ -521,6 +557,17 @@
         <bendingNode minX="-4.7" maxX="2.1" minZ="0.45" maxZ="3.35" yOffset="-0.3" node="rightArm"/>
     </foliageBending>
     
+	<wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    
+	<washable dirtDuration="90" washDuration="1" workMultiplier="6" fieldMultiplier="2"/>
+	
+	<rimColorConfigurations useDefaultColors="true" price="300" defaultColorIndex="0">
+		<rimColorConfiguration name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+		<rimColorConfiguration name="DennisK Black" 		color="0 0 0"/>
+		<rimColorConfiguration name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<rimColorConfiguration name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+    </rimColorConfigurations>
+    
 	<baseMaterial>
         <material name="koralin9840_mat" baseNode="koralin9840_vis">
             <shaderParameter name="colorMat0" value="LEMKEN_BLUE1"/>
@@ -529,13 +576,36 @@
             <shaderParameter name="colorMat0" value="LEMKEN_BLUE1"/>
         </material>
         <material name="koralin9840Disc1_mat" baseNode="discsCenterBack">
-            <shaderParameter name="colorMat0" value="LEMKEN_BLUE1"/>
+            <shaderParameter name="colorMat0" value="RAL_9005"/>
         </material>
     </baseMaterial>
-    
-	<wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
-    
-	<washable dirtDuration="90" washDuration="1" workMultiplier="6" fieldMultiplier="2"/>
+	
+	<baseMaterialConfigurations  price="1000" useDefaultColors="true"  defaultColorIndex="0" title="Base colors">
+		<material 					name="koralin9840_mat" shaderParameter="colorMat0"/>
+		
+		<baseMaterialConfiguration 	name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<baseMaterialConfiguration 	name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<baseMaterialConfiguration 	name="DennisK Black" 		color="0 0 0"/>
+		<baseMaterialConfiguration 	name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+	</baseMaterialConfigurations >
+	
+	<designMaterialConfigurations  price="1000" useDefaultColors="true"  defaultColorIndex="0" title="Base colors">
+		<material 						name="koralin9840Alpha_mat" shaderParameter="colorMat0"/>
+		
+		<designMaterialConfiguration 	name="DennisK Black" 		color="0 0 0"/>
+		<designMaterialConfiguration 	name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<designMaterialConfiguration 	name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<designMaterialConfiguration 	name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+	</designMaterialConfigurations >
+	
+	<designMaterial2Configurations  price="1000" useDefaultColors="true"  defaultColorIndex="0" title="Base colors">
+		<material 						name="koralin9840Disc1_mat" shaderParameter="colorMat0"/>
+		
+		<designMaterial2Configuration 	name="DennisK Black" 		color="0 0 0"/>
+		<designMaterial2Configuration 	name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<designMaterial2Configuration 	name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<designMaterial2Configuration 	name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+	</designMaterial2Configurations >
     
 	<i3dMappings>
         <i3dMapping id="koralin9840_main_component1" 		node="0>"/>
